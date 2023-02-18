@@ -1,0 +1,380 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+        background-image: url(https://images.squarespace-cdn.com/content/v1/63aca7f10b04fb0a577e1b1d/f2a0c604-324e-4516-b05c-82a7b05fc7be/4773C999-D866-490A-8434-D725D998B8C9.JPG);
+        background-position: top center;
+        background-size: cover;
+    }
+
+    .blu-text {
+        color: #c7f3fe;
+    }
+
+    .blu-bg {
+        background-color: #c7f3fe;
+    }
+
+    .backdrop {
+        backdrop-filter: brightness(50%) blur(10px);
+    }
+
+    label {
+        user-select: none;
+    }
+
+    input[type="checkbox"] {
+        display: none;
+    }
+
+    input:checked ~ .unfilled {
+        display: none;
+    }
+
+    input:not(:checked) ~ .filled {
+        display: none;
+    }
+  </style>
+</head>
+<body>
+    <div class="flex flex-col mx-auto my-12 backdrop">
+        <h1 class="text-4xl font-bold text-center my-8 text-shadow blu-text">
+            H & H Social Consulting
+        </h1>
+        <div class="flex flex-col">
+            <h2 class="text-2xl font-bold text-center my-4 text-slate-200 text-shadow">
+                Select Platforms
+            </h2>
+            <div class="flex md:flex-row flex-col mx-auto gap-4 my-4">
+                <div multiple class="flex-initial flex flex-row gap-2" id="platforms">
+                    <label 
+                        class="hover:bg-blue-600 group flex flex-col gap-2 items-center rounded-md bg-slate-200 border-slate-200 text-slate-900 font-semibold pl-2 pr-3 py-2 shadow-sm">
+                        <input type="checkbox">
+                        
+                        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="mx-2 unfilled"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM256 48C141.1 48 48 141.1 48 256C48 370.9 141.1 464 256 464C370.9 464 464 370.9 464 256C464 141.1 370.9 48 256 48z"/></svg>
+                        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="mx-2 filled"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zm0-160c-53 0-96-43-96-96s43-96 96-96s96 43 96 96s-43 96-96 96z"/></svg>
+
+                        <img src="https://cdn.discordapp.com/attachments/318507548393209858/1068748545596862504/2048px-Instagram_icon.png" width="64" height="64">
+                        <div class="relative filled">
+                            <select class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded-lg leading-tight focus:outline-none focus:shadow-outline-blue focus:border-blue-500">
+                              <option>1 account</option>
+                              <option>2 accounts</option>
+                              <option>3 accounts</option>
+                            </select>
+                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                              <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                            </div>
+                          </div>
+                    </label>
+                    <label 
+                        class="hover:bg-blue-600 group flex flex-col gap-2 items-center rounded-md bg-slate-200 border-slate-200 text-slate-900 font-semibold pl-2 pr-3 py-2 shadow-sm">
+                        <input type="checkbox">
+
+                        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="mx-2 unfilled"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM256 48C141.1 48 48 141.1 48 256C48 370.9 141.1 464 256 464C370.9 464 464 370.9 464 256C464 141.1 370.9 48 256 48z"/></svg>
+                        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="mx-2 filled"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zm0-160c-53 0-96-43-96-96s43-96 96-96s96 43 96 96s-43 96-96 96z"/></svg>
+
+                        <img class="rounded-lg" src="https://cdn.discordapp.com/attachments/318507548393209858/1068748607416705044/tiktok-icon-logo-1CB398A1BD-seeklogo.png" width="64" height="64">
+                        <div class="relative filled">
+                            <select class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded-lg leading-tight focus:outline-none focus:shadow-outline-blue focus:border-blue-500">
+                              <option>1 account</option>
+                              <option>2 accounts</option>
+                              <option>3 accounts</option>
+                            </select>
+                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                              <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                            </div>
+                          </div>
+                    </label>
+                    <label 
+                        class="hover:bg-blue-600 group flex flex-col gap-2 items-center rounded-md bg-slate-200 border-slate-200 text-slate-900 font-semibold pl-2 pr-3 py-2 shadow-sm">
+                        <input type="checkbox">
+
+                        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="mx-2 unfilled"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM256 48C141.1 48 48 141.1 48 256C48 370.9 141.1 464 256 464C370.9 464 464 370.9 464 256C464 141.1 370.9 48 256 48z"/></svg>
+                        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="mx-2 filled"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zm0-160c-53 0-96-43-96-96s43-96 96-96s96 43 96 96s-43 96-96 96z"/></svg>
+
+                        <img src="https://cdn.discordapp.com/attachments/318507548393209858/1068748892843298826/2048px-2021_Facebook_icon.png" width="64" height="64">
+                        <div class="relative filled">
+                            <select class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded-lg leading-tight focus:outline-none focus:shadow-outline-blue focus:border-blue-500">
+                              <option>1 account</option>
+                              <option>2 accounts</option>
+                              <option>3 accounts</option>
+                            </select>
+                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                              <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                            </div>
+                          </div>
+                    </label>
+                    <label 
+                        class="hover:bg-blue-600 group flex flex-col gap-2 items-center rounded-md bg-slate-200 border-slate-200 text-slate-900 font-semibold pl-2 pr-3 py-2 shadow-sm">
+                        <input type="checkbox">
+
+                        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="mx-2 unfilled"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM256 48C141.1 48 48 141.1 48 256C48 370.9 141.1 464 256 464C370.9 464 464 370.9 464 256C464 141.1 370.9 48 256 48z"/></svg>
+                        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="mx-2 filled"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zm0-160c-53 0-96-43-96-96s43-96 96-96s96 43 96 96s-43 96-96 96z"/></svg>
+
+                        <img src="https://cdn.discordapp.com/attachments/318507548393209858/1076342464572559430/youtube2-removebg-preview.png" width="64" height="64">
+                        <div class="relative filled">
+                            <select class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded-lg leading-tight focus:outline-none focus:shadow-outline-blue focus:border-blue-500">
+                              <option>1 account</option>
+                              <option>2 accounts</option>
+                              <option>3 accounts</option>
+                            </select>
+                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                              <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                            </div>
+                          </div>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col" id="service-page">
+            <h2 class="text-2xl font-bold text-center my-4 text-slate-200 text-shadow">
+                Select Services
+            </h2>
+            <div class="flex md:flex-row flex-col mx-auto gap-4 my-4">
+                <div multiple class="flex-initial flex flex-col gap-2" id="services">
+                    <label 
+                        price="150"
+                        description="H&H Social Consulting offers Content Management and Curation, providing clients with the tools and expertise to manage and curate their social media content, including research, creation, scheduling, and analysis."
+                        more="https://www.hhsocialconsulting.com/content-management-and-curation"
+                        class="hover:bg-blue-600 group flex items-center rounded-md bg-slate-200 border-slate-200 text-slate-900 font-semibold pl-2 pr-3 py-2 shadow-sm">
+                        <input type="checkbox">
+                        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="mx-2 unfilled"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM256 48C141.1 48 48 141.1 48 256C48 370.9 141.1 464 256 464C370.9 464 464 370.9 464 256C464 141.1 370.9 48 256 48z"/></svg>
+                        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="mx-2 filled"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zm0-160c-53 0-96-43-96-96s43-96 96-96s96 43 96 96s-43 96-96 96z"/></svg>
+                        Content Management & Curation
+                    </label>
+                    <label 
+                        price="150"
+                        description="H&H Social Consulting offers Scheduled Posting to help clients plan and execute their social media content. The H&H team will work with clients to schedule posts on their desired platforms, ensuring consistent and regular content for their audience. This service lets clients focus on their business while H&H manages its social media presence."
+                        more="https://www.hhsocialconsulting.com/scheduled-posting"
+                        class="hover:bg-blue-600 group flex items-center rounded-md bg-slate-200 border-slate-200 text-slate-900 font-semibold pl-2 pr-3 py-2 shadow-sm">
+                        <input type="checkbox">
+                        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="mx-2 unfilled"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM256 48C141.1 48 48 141.1 48 256C48 370.9 141.1 464 256 464C370.9 464 464 370.9 464 256C464 141.1 370.9 48 256 48z"/></svg>
+                        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="mx-2 filled"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zm0-160c-53 0-96-43-96-96s43-96 96-96s96 43 96 96s-43 96-96 96z"/></svg>
+                        Scheduled Posting
+                    </label>
+                    <label 
+                        price="150"
+                        description="H&H Social Consulting offers Captioning service, providing clients with the tools and expertise they need to caption their Instagram, TikTok, and Shopify videos, including captioning, transcription, and analysis of their captioning content."
+                        more="https://www.hhsocialconsulting.com/captioning"
+                        class="hover:bg-blue-600 group flex items-center rounded-md bg-slate-200 border-slate-200 text-slate-900 font-semibold pl-2 pr-3 py-2 shadow-sm">
+                        <input type="checkbox">
+                        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="mx-2 unfilled"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM256 48C141.1 48 48 141.1 48 256C48 370.9 141.1 464 256 464C370.9 464 464 370.9 464 256C464 141.1 370.9 48 256 48z"/></svg>
+                        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="mx-2 filled"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zm0-160c-53 0-96-43-96-96s43-96 96-96s96 43 96 96s-43 96-96 96z"/></svg>
+                        Caption Writing
+                    </label>
+                    <label 
+                        price="200"
+                        description="H&H Social Consulting offers Social Media Analytics, providing clients with insights on their social media performance, including engagement, follower growth, and content performance on major platforms. Additionally, H&H delivers recommendations to optimize campaigns and maximize ROI."
+                        more="https://www.hhsocialconsulting.com/social-media-analytics"
+                        class="hover:bg-blue-600 group flex items-center rounded-md bg-slate-200 border-slate-200 text-slate-900 font-semibold pl-2 pr-3 py-2 shadow-sm">
+                        <input type="checkbox">
+                        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="mx-2 unfilled"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM256 48C141.1 48 48 141.1 48 256C48 370.9 141.1 464 256 464C370.9 464 464 370.9 464 256C464 141.1 370.9 48 256 48z"/></svg>
+                        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="mx-2 filled"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zm0-160c-53 0-96-43-96-96s43-96 96-96s96 43 96 96s-43 96-96 96z"/></svg>
+                        Social Media Analytics
+                    </label>
+                    <label 
+                        price="150"
+                        description="H&H Content Design provides clients with visually appealing content for their desired social media platforms. Our team curates or creates content to craft posts that effectively communicate the client's brand messaging."
+                        more="https://www.hhsocialconsulting.com/content-design"
+                        class="hover:bg-blue-600 group flex items-center rounded-md bg-slate-200 border-slate-200 text-slate-900 font-semibold pl-2 pr-3 py-2 shadow-sm">
+                        <input type="checkbox">
+                        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="mx-2 unfilled"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM256 48C141.1 48 48 141.1 48 256C48 370.9 141.1 464 256 464C370.9 464 464 370.9 464 256C464 141.1 370.9 48 256 48z"/></svg>
+                        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="mx-2 filled"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zm0-160c-53 0-96-43-96-96s43-96 96-96s96 43 96 96s-43 96-96 96z"/></svg>
+                        Graphic Design
+                    </label>
+                    <label 
+                        price="100"
+                        description="H&H Social Consulting offers Follower Engagement as a service to enhance clients' social media presence. The H&H team will interact with followers, comment, and engage with other accounts to create a friendly atmosphere for the client's brand. Clients can sit back and focus on their business while H&H manages its social media presence and enhances its online presence by engaging with followers."
+                        more="https://www.hhsocialconsulting.com/follower-engagement"
+                        class="hover:bg-blue-600 group flex items-center rounded-md bg-slate-200 border-slate-200 text-slate-900 font-semibold pl-2 pr-3 py-2 shadow-sm">
+                        <input type="checkbox">
+                        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="mx-2 unfilled"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM256 48C141.1 48 48 141.1 48 256C48 370.9 141.1 464 256 464C370.9 464 464 370.9 464 256C464 141.1 370.9 48 256 48z"/></svg>
+                        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="mx-2 filled"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zm0-160c-53 0-96-43-96-96s43-96 96-96s96 43 96 96s-43 96-96 96z"/></svg>
+                        Follower Engagement
+                    </label>
+                    <label 
+                        price="125"
+                        description="H&H Social Consulting offers Boosting Posts Using Sponsored Ads as a service to help clients increase their social media reach. The H&H team will work with clients to create sponsored ads for their desired platforms, such as TikTok and Instagram, and will promote the clients' posts to reach a wider audience. This service helps clients maximize their social media presence and get more eyes on their content."
+                        more="https://www.hhsocialconsulting.com/boosting-posts-using-sponsored-ads"
+                        class="hover:bg-blue-600 group flex items-center rounded-md bg-slate-200 border-slate-200 text-slate-900 font-semibold pl-2 pr-3 py-2 shadow-sm">
+                        <input type="checkbox">
+                        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="mx-2 unfilled"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM256 48C141.1 48 48 141.1 48 256C48 370.9 141.1 464 256 464C370.9 464 464 370.9 464 256C464 141.1 370.9 48 256 48z"/></svg>
+                        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="mx-2 filled"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zm0-160c-53 0-96-43-96-96s43-96 96-96s96 43 96 96s-43 96-96 96z"/></svg>
+                        Boosting Posts Using Sponsored Ads
+                    </label>
+                    <label 
+                        price="200"
+                        description="H&H Social Consulting offers Shopify Management as a service to help clients manage their online store. The H&H team will work with clients to handle their store's day-to-day operations, ensuring its smooth running. This service lets clients focus on their business while H&H manages its online store presence."
+                        more="https://www.hhsocialconsulting.com/shopify-management"
+                        class="hover:bg-blue-600 group flex items-center rounded-md bg-slate-200 border-slate-200 text-slate-900 font-semibold pl-2 pr-3 py-2 shadow-sm">
+                        <input type="checkbox">
+                        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="mx-2 unfilled"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM256 48C141.1 48 48 141.1 48 256C48 370.9 141.1 464 256 464C370.9 464 464 370.9 464 256C464 141.1 370.9 48 256 48z"/></svg>
+                        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="mx-2 filled"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zm0-160c-53 0-96-43-96-96s43-96 96-96s96 43 96 96s-43 96-96 96z"/></svg>
+                        Shopify Management
+                    </label>
+                    <label 
+                        price="150"
+                        description="H&H Social Consulting offers Brand SEO (Search Engine Optimization) as a service to improve clients' online visibility and attract more organic traffic to their websites. The H&H team will work with clients to optimize their website and online presence, including researching keywords, creating meta tags, and improving website content to increase search engine rankings. This service lets clients focus on their business while H&H boosts its online presence.                        "
+                        more="https://www.hhsocialconsulting.com/brand-seo"
+                        class="hover:bg-blue-600 group flex items-center rounded-md bg-slate-200 border-slate-200 text-slate-900 font-semibold pl-2 pr-3 py-2 shadow-sm">
+                        <input type="checkbox">
+                        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="mx-2 unfilled"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM256 48C141.1 48 48 141.1 48 256C48 370.9 141.1 464 256 464C370.9 464 464 370.9 464 256C464 141.1 370.9 48 256 48z"/></svg>
+                        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="mx-2 filled"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zm0-160c-53 0-96-43-96-96s43-96 96-96s96 43 96 96s-43 96-96 96z"/></svg>
+                        Brand SEO
+                    </label>
+                    <label 
+                        price="150"
+                        description="H&H Social Consulting offers Copywriting as a service to help clients create compelling and engaging content for their audience. The H&H team will work with clients to craft clear and concise messages, using a tone and style that represents the client's brand. With this service, clients can focus on their business while H&H handles the writing for them, delivering high-quality content that drives results."
+                        more="https://www.hhsocialconsulting.com/newsletter-writing"
+                        class="hover:bg-blue-600 group flex items-center rounded-md bg-slate-200 border-slate-200 text-slate-900 font-semibold pl-2 pr-3 py-2 shadow-sm">
+                        <input type="checkbox">
+                        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="mx-2 unfilled"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM256 48C141.1 48 48 141.1 48 256C48 370.9 141.1 464 256 464C370.9 464 464 370.9 464 256C464 141.1 370.9 48 256 48z"/></svg>
+                        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="mx-2 filled"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zm0-160c-53 0-96-43-96-96s43-96 96-96s96 43 96 96s-43 96-96 96z"/></svg>
+                        Newsletter Writing 
+                    </label>
+                </div>
+                <div class="flex-initial blu-bg text-slate-200 shadow rounded-xl p-8 max-w-md hidden" id="infobox">
+                    <div class="text-slate-800 font-bold" id="title">
+                        Content Management & Curation
+                    </div>
+                    <blockquote class="my-4">
+                        <p class="text-md font-medium text-slate-600" id="description">
+                            Example description for a service. This text changes if you mouse hover another service on PC or tap a service on mobile.
+                        </p>
+                    </blockquote>
+                    <a target="_blank" class="group inline-flex items-center h-9 rounded-full text-sm font-semibold whitespace-nowrap px-3 focus:outline-none focus:ring-2 bg-sky-50 text-sky-600 hover:bg-sky-100 hover:text-sky-700 focus:ring-sky-600 dark:bg-slate-700 dark:text-slate-100 dark:hover:bg-slate-600 dark:hover:text-white dark:focus:ring-slate-500" id="more" href="/">Learn more<svg class="overflow-visible ml-3 text-sky-700 group-hover:text-sky-600 dark:text-slate-500 dark:group-hover:text-slate-600" width="3" height="6" viewBox="0 0 3 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0L3 3L0 6"></path></svg></a>
+                
+                    <div class="text-md font-semibold text-slate-500 mt-1">
+                    <!-- <span id="price">0.00</span> USD per month -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col">
+            <h2 class="text-2xl font-bold text-center my-4 text-slate-200 text-shadow">
+                My Estimate
+            </h2>
+            <div class="bg-red-100 border-t-4 border-red-500 rounded-b text-red-900 px-4 py-3 shadow-md max-w-lg mx-auto" role="alert" id="estimate-alert">
+                <div class="flex">
+                    <div class="py-1"><svg class="fill-current h-6 w-6 text-red-500 mr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z"/></svg></div>
+                    <div>
+                    <p class="font-bold">Warning</p>
+                    <p class="text-sm" id="warning-text">A minimum of 1 platform is required</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mx-auto blu-bg text-slate-200 shadow rounded-xl p-8 max-w-lg" id="estimate">
+                <div class="text-slate-800 font-bold mb-2 mr-12">
+                    Estimate summary
+                </div>
+                <div class="flex flex-row gap-6">
+                    <!-- <div class="flex flex-auto flex-col">
+                        <span class="text-slate-600 font-bold mb-2">
+                            Upfront cost
+                        </span>
+                        <p class="text-md font-medium text-slate-700" id="total-upfront">
+                            0.00 USD
+                        </p>
+                    </div> -->
+                    <div class="flex flex-auto flex-col">
+                        <span class="text-slate-600 font-bold mb-2">
+                            Monthly cost
+                        </span>
+                        <p class="text-3xl font-medium text-slate-700" id="total-monthly">
+                            0.00 USD
+                        </p>
+                        <!-- <p class="text-md font-medium text-slate-700">
+                            + <span id="tax"></span> tax
+                        </p> -->
+                    </div>
+                    <!-- <div class="flex flex-auto flex-col border-l pl-3 border-slate-600">
+                        <span class="text-slate-600 font-bold mb-2">
+                            Total 12 months cost
+                        </span>
+                        <p class="text-3xl font-medium text-slate-700" id="total">
+                            0.00 USD
+                        </p>
+                        <p class="text-md font-medium text-slate-700">
+                            Includes upfront cost
+                        </p>
+                    </div> -->
+                </div>
+            </div>
+            <h2 class="text-2xl font-bold text-center mt-4 text-slate-200 text-shadow">
+                Contact Us to Get Started
+            </h2>
+            <a class="mx-auto" id="mailer" href="mailto:contact@hhsocialconsulting.com">
+                <button class="h-10 px-6 font-semibold shadow rounded-md text-black bg-white w-64 my-4">
+                    Contact Us
+                </button>
+            </a>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script>
+        function updateTotal() {
+            const platformCount = $('#platforms input:checked ~ div select').toArray().length;
+            const serviceCount = $('#services input:checked').toArray().length;
+            
+            if(platformCount < 1) {
+                $('#estimate-alert').show();
+                $('#estimate').hide();
+                $('#service-page').hide();
+                $('#warning-text').text('A minimum of 1 platform is required');
+                console.log(serviceCount);
+            } else if(serviceCount < 4) {
+                $('#estimate-alert').show();
+                $('#estimate').hide();
+                $('#service-page').show();
+                $('#warning-text').text('A minimum of 4 services is required');
+                console.log(platformCount);
+            } else {
+                $('#estimate-alert').hide();
+                $('#estimate').show();
+                $('#service-page').show();
+                console.log('a');
+            }
+
+            let totalServices = $('#services input:checked').toArray().map(el => $(el).parent().attr('price')).reduce((p, v) => p + parseFloat(v), 0);
+            let totalPlatforms = $('#platforms input:checked ~ div select').toArray().map(el => parseInt(el.value.split(' ')[0]) * 100).reduce((p, v) => p + parseFloat(v), 0);
+
+            const total = totalServices + totalPlatforms;
+
+            $('#total-monthly').text(total.toFixed(2) + ' USD');
+            $('#tax').text((total * 0.04).toFixed(2) + ' USD');
+            // $('#total').text(total.toFixed(2) + ' USD');
+            updateMail(total.toFixed(2));
+        }
+
+        function updateMail(total) {
+            let subject= "Custom quote";
+            let info = '';
+            let body = `I'm interested in using your services.\r\n\r\nQuote price: ${total} USD\r\nQuote info: ${info}`;
+            let uri = `mailto:contact@hhsocialconsulting.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            $('#mailer').attr('href', uri);
+        }
+
+        function showInfo (e) {
+            $('#infobox').show();
+            $('#title').text($(this).text());
+            $('#description').text($(this).attr('description'));
+            $('#price').text(parseFloat($(this).attr('price')).toFixed(2));
+            $('#more').attr('href', $(this).attr('more'));
+
+            updateTotal();
+        }
+
+        $('#services label').click(showInfo);
+        $('#platforms label').click(updateTotal);
+        $('#services label').hover(showInfo);
+
+        updateTotal();
+    </script>
+</body>
+</html>
