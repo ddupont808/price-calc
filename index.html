@@ -61,7 +61,7 @@
 
                         <img src="https://cdn.discordapp.com/attachments/318507548393209858/1068748545596862504/2048px-Instagram_icon.png" width="64" height="64">
                         <div class="relative filled">
-                            <select class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded-lg leading-tight focus:outline-none focus:shadow-outline-blue focus:border-blue-500">
+                            <select name="instagram" class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded-lg leading-tight focus:outline-none focus:shadow-outline-blue focus:border-blue-500">
                               <option>1 account</option>
                               <option>2 accounts</option>
                               <option>3 accounts</option>
@@ -80,7 +80,7 @@
 
                         <img class="rounded-lg" src="https://cdn.discordapp.com/attachments/318507548393209858/1068748607416705044/tiktok-icon-logo-1CB398A1BD-seeklogo.png" width="64" height="64">
                         <div class="relative filled">
-                            <select class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded-lg leading-tight focus:outline-none focus:shadow-outline-blue focus:border-blue-500">
+                            <select name="tiktok" class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded-lg leading-tight focus:outline-none focus:shadow-outline-blue focus:border-blue-500">
                               <option>1 account</option>
                               <option>2 accounts</option>
                               <option>3 accounts</option>
@@ -99,7 +99,7 @@
 
                         <img src="https://cdn.discordapp.com/attachments/318507548393209858/1068748892843298826/2048px-2021_Facebook_icon.png" width="64" height="64">
                         <div class="relative filled">
-                            <select class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded-lg leading-tight focus:outline-none focus:shadow-outline-blue focus:border-blue-500">
+                            <select name="facebook" class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded-lg leading-tight focus:outline-none focus:shadow-outline-blue focus:border-blue-500">
                               <option>1 account</option>
                               <option>2 accounts</option>
                               <option>3 accounts</option>
@@ -118,7 +118,7 @@
 
                         <img src="https://cdn.discordapp.com/attachments/318507548393209858/1076342464572559430/youtube2-removebg-preview.png" width="64" height="64">
                         <div class="relative filled">
-                            <select class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded-lg leading-tight focus:outline-none focus:shadow-outline-blue focus:border-blue-500">
+                            <select name="youtube" class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded-lg leading-tight focus:outline-none focus:shadow-outline-blue focus:border-blue-500">
                               <option>1 account</option>
                               <option>2 accounts</option>
                               <option>3 accounts</option>
@@ -354,8 +354,9 @@
 
         function updateMail(total) {
             let subject= "Custom quote";
-            let info = '';
-            let body = `I'm interested in using your services.\r\n\r\nQuote price: ${total} USD\r\nQuote info: ${info}`;
+            let infoPlatforms = $('#platforms input:checked ~ div select').toArray().map(el => $(el).attr('name') + ' x' + el.value.split(' ')[0]).join(', ');
+            let infoServices = $('#services input:checked').toArray().map(el => $(el).parent().text().trim()).join(', ');
+            let body = `I'm interested in using your services.\r\n\r\nQuote price: ${total} USD\r\nPlatforms: ${infoPlatforms}\r\nServices: ${infoServices}`;
             let uri = `mailto:contact@hhsocialconsulting.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
             $('#mailer').attr('href', uri);
         }
